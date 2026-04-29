@@ -30,8 +30,8 @@ $(function () {
      //toggleGrid();
 
     // TODO 2 - Create Platforms
-    createPlatform(1100, 599, 200, 10, "orange");
-    createPlatform(650, 485, 200, 10, "red");
+    createPlatform(1100, 599, 200, 10, "yellow");
+    createPlatform(650, 485, 200, 10, "green");
 createPlatform(600,500,100,10,"grey");
 createPlatform(500,250,50,10);
 createPlatform(400,250,50,10);
