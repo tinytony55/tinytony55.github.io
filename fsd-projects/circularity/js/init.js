@@ -21,23 +21,27 @@ var init = function (window) {
         
         // TODO 1 : Declare and initialize our variables
         var circle;
-        var circle = {};
+        var circles = [];
 
         // TODO 2 : Create a function that draws a circle 
         function drawCircle(){
             circle = draw.randomCircleInArea(canvas, true, true, "#999", 2);
-physikz.addRandomVelocity(circle, canvas, 5, 5);
-view.addChild(circle);
-circles.push(circle);
+            physikz.addRandomVelocity(circle, canvas, 5, 5);
+            view.addChild(circle);
+            circles.push(circle);
         }
 
 
         // TODO 3 : Call the drawCircle() function
+       /*drawCircle();
        drawCircle();
-
-
+       drawCircle();
+       drawCircle();
+       drawCircle();*/
         // TODO 7 : Use a loop to create multiple circles
-
+for (var i = 0; i < 50; i++){
+    drawCircle();
+}
 
 
 
@@ -85,7 +89,13 @@ game.checkCirclePosition(/* bracket notation to access the fifth circle */);
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
             if (circle.x < 0){
           circle.x = canvas.width;
-            } if circle 
+            } 
+            if (circle.y > canvas.length){
+              circle.y = 0; 
+            }
+            if (circle.y < 0){
+                circle.y = canvas.length;
+            }
 
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
